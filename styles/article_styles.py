@@ -59,6 +59,7 @@ section {
 
 h2 {
    font-size:1.5rem;
+   margin: 35px 0 0 0;
 }
 
 p {

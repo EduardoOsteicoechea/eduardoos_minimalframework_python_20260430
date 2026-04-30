@@ -1,7 +1,7 @@
 GLOBAL_STYLES = """
 
 :root{
-   font-family: Montserrat, Outfit, Raleway, system-ui, sans-serif;
+   font-family: Raleway, Montserrat, Outfit, system-ui, sans-serif;
    font-weight: 500;
    
 }
