@@ -1,0 +1,34 @@
+name: Deploy Backend to Amazon Linux
+
+on:
+  push:
+    branches:
+      - main # Or whichever branch you use for production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy files via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "."
+          target: "/var/www/eduardoos.com/backend"
+          # Excludes copying your local pycache and git folders to the server
+          rm: false 
+          exclude: ".git/,__pycache__/,*.pyc"
+
+      - name: Restart Systemd Service
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo systemctl restart eduardoos-api
