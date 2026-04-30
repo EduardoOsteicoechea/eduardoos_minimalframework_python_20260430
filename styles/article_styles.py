@@ -56,7 +56,7 @@ section {
    font-size:.75rem;
    border-radius: var(--border_radius_01) !important;
    padding: 5px;
-   background: #eee;
+   background: #ccc;
    color: var(--accent_color_01);
 }
 
