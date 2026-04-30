@@ -3,7 +3,7 @@ THEME_STYLES = """
 :root{
    /* --global_background: #fcfcfc; */
    /* --global_background: #e8e8e8; */
-   --global_background: #e4f7f7;
+   --global_background: #f0f0f0;
    
    /*--global_foreground: #343434;*/
    --global_foreground: #555;

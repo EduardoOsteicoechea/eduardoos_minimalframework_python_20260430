@@ -11,9 +11,7 @@ article {
 
 .author-meta { 
    color: #aaa; 
-   margin-bottom: 2rem; 
    font-size: 0.9rem;
-   padding: 0 10px;
 }
 
 h1,h2 {
@@ -30,7 +28,6 @@ section {
    font-style: italic; 
    border-left: 4px solid #757575; 
    padding-left: 1rem; 
-   margin: 1.5rem 0; 
    color: #ddd; 
    background: #2a2a2a; 
    padding: 1rem; 
@@ -55,7 +52,7 @@ section {
    text-align:center;
    font-size:.75rem;
    border-radius: var(--border_radius_01) !important;
-   padding: 5px 10px;
+   padding: 8px 10px;
    background: #ddd;
    color: var(--accent_color_01);
 }
