@@ -23,7 +23,7 @@ h1,h2 {
 section {
    display:flex;
    flex-direction:column;
-   gap:100px;
+   gap:25px;
 }
 
 .main-verse { 
