@@ -4,8 +4,8 @@ article {
    display:flex;
    flex-direction:column;
    max-width: 55ch;
-   margin: 2rem auto;
-   padding: 0 1rem;
+   margin: 1rem auto;
+   padding: 0 1.5rem;
    gap:45px;
 }
 
