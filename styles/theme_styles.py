@@ -6,6 +6,8 @@ THEME_STYLES = """
    --global_foreground: #555;
    /*--accent_color_01: #ee5700;*/
    --accent_color_01: #000;
+   
+   --border_radius_01: 4px;
 }
 
 """

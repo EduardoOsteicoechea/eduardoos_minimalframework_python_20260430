@@ -1,5 +1,7 @@
-:root{
+:root {
    --global_background: #fcfcfc;
    --global_foreground: #878787;
    --accent_color_01: #ee5700;
+
+   --border_radius_01: 4px;
 }

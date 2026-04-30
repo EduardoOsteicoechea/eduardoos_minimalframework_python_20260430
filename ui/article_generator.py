@@ -13,24 +13,18 @@ from ui.layout import article_layout
 
 
 def apply_emphasis(text: str, phrases: list[str]) -> str:
-    """Highlights specific phrases in the text using <strong> tags."""
     if not phrases or not text:
         return text
-
     for phrase in phrases:
         if phrase and phrase in text:
-            text = text.replace(phrase, strong(phrase))
-
+            text = text.replace(phrase, strong(phrase, {"class":"biblical_quote_emphasized_phrase"}))
     return text
 
 
 def format_biblical_quote(text: str, ref: str, phrases: list[str]) -> str:
-    """Formats a text and its reference into a biblical blockquote."""
-    formatted_text = apply_emphasis(text, phrases)
-    ref_box = p(ref, {"class": "biblical_quote_reference"})
-
-    # FIXED: Replaced the invalid .join() with standard string formatting
-    content = f"{formatted_text} {ref_box}"
+    formatted_text = p(apply_emphasis(text, phrases), {"class": "bible_quote_text"})
+    ref_box = p(ref, {"class": "bible_quote_reference"})
+    content = f"{ref_box} {formatted_text}"
     return blockquote(content, {"class": "bible-quote"})
 
 
@@ -40,19 +34,15 @@ def format_paragraph(text: str, phrases: list[str]) -> str:
 
 
 def format_section(index: int, section: dict[str, Any]) -> list:
-   """Parses a section dictionary and returns a list of HTML elements."""
+   
    section_elements = [f"<section id='section_{index}'>"]
 
-   # 2. Format Content Array
    for item in section.get("content", []):
       if not isinstance(item, dict):
          continue
-
       text = item.get("text", "")
       ref = item.get("biblical_reference", "")
-      # Note: Preserving the typo "emphasyzed_phrases" to match your JSON data
-      phrases = item.get("emphasyzed_phrases", [])
-
+      phrases = item.get("emphasized_phrases", [])
       if ref:
          section_elements.append(format_biblical_quote(text, ref, phrases))
       elif text:

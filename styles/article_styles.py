@@ -6,7 +6,7 @@ article {
    max-width: 55ch;
    margin: 1rem auto;
    padding: 0 1.5rem;
-   gap:45px;
+   gap:20px;
 }
 
 .author-meta { 
@@ -23,7 +23,7 @@ h1,h2 {
 section {
    display:flex;
    flex-direction:column;
-   gap:25px;
+   gap:20px;
 }
 
 .main-verse { 
@@ -38,16 +38,26 @@ section {
 }
 
 .bible-quote { 
-   color: var(--accent_color_01);
+   display:flex;
+   flex-direction:column;
+   gap: 15px;
+   align-items:start;
+   justify-content:start;   
    font-weight:600;
 }
 
-.biblical_quote_reference {
-   display: block;
-   margin: 15px 0 0 auto;
+.bible_quote_text{
    width:100%;
-   text-align:right;
-   font-size:.8rem;
+   color: var(--accent_color_01);
+}
+
+.bible_quote_reference {
+   text-align:center;
+   font-size:.75rem;
+   border-radius: var(--border_radius_01) !important;
+   padding: 5px;
+   background: #eee;
+   color: var(--accent_color_01);
 }
 
 h2 {
@@ -55,12 +65,12 @@ h2 {
 }
 
 p {
-   line-height: 1.35; 
+   line-height: 1.25; 
 }
 
 strong {
    font-weight:900 !important;
-   text-decoration: underline;
+   /*text-decoration: underline;*/
 }
 
 """
