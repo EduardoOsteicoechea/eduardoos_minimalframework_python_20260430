@@ -8,7 +8,8 @@ def page_top_start(title="App") -> str:
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8">
+      <meta charset="UTF-8">      
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>{html_sanitize(title)}</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
