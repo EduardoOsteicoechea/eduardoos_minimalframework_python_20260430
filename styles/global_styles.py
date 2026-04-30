@@ -3,7 +3,6 @@ GLOBAL_STYLES = """
 :root{
    font-family: Montserrat, Outfit, Raleway, system-ui, sans-serif;
    font-weight: 500;
-   color: var(--global_foreground);
    
 }
 
