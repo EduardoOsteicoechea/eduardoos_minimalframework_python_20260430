@@ -21,7 +21,7 @@ h1,h2 {
 section {
    display:flex;
    flex-direction:column;
-   gap:20px;
+   gap:30px;
 }
 
 .main-verse { 
