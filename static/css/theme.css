@@ -1,36 +1,41 @@
+/* 1. Default & Manual Light Theme */
 :root,
 :root[data-theme="light"] {
+   color-scheme: light; /* Tells mobile browsers NOT to auto-invert */
    --global_background: #f0f0f0;
    --global_foreground: #555;
    --accent_color_01: #000;
    --border_radius_01: 4px;
    --button_background: #aaa;
-   --button_active:#21c568;
+   --button_active: #21c568;
 }
 
-:root{
-   --default_font_weight: 5   00; 
+/* Base styles applied to the root */
+:root {
+   --default_font_weight: 500; /* FIXED: Removed the spaces here */
    font-family: Raleway, Montserrat, Outfit, system-ui, sans-serif;
    font-weight: var(--default_font_weight);
    color: var(--global_foreground);
+   background-color: var(--global_background); /* ADDED: Applies the background color to the page */
 }
 
 /* 2. Automatic Dark Theme */
 @media (prefers-color-scheme: dark) {
     :root {
+       color-scheme: dark; /* Tells mobile browsers this is officially dark */
        --global_background: #121212; /* Deep dark gray */
        --global_foreground: #e0e0e0; /* Off-white text */
        --accent_color_01: #ffffff;   /* White accents */
        /* Notice we don't need to redefine border_radius if it doesn't change */
     }
-    
 }
 
 /* 3. Manual Dark Theme (Forces dark mode if the user clicks the button) */
 :root[data-theme="dark"] {
+   color-scheme: dark; /* Tells mobile browsers this is officially dark */
    --global_background: #121212;
    --global_foreground: #e0e0e0;
    --accent_color_01: #ffffff;
    --button_background: #ccc;
-   --button_active:#21c568;
+   --button_active: #21c568;
 }
