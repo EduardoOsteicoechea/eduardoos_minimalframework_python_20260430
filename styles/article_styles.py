@@ -45,6 +45,7 @@ section {
 
 .bible_quote_text{
    width:100%;
+   font-style: italic;
    color: var(--accent_color_01);
 }
 
@@ -67,8 +68,8 @@ p {
 }
 
 strong {
-   font-weight:900 !important;
-   /*text-decoration: underline;*/
+   /* font-weight:900 !important; */
+   /* text-decoration: underline; */
 }
 
 """
