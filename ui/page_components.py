@@ -11,6 +11,8 @@ def page_top_start(title="App") -> str:
       <meta charset="UTF-8">      
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       
+      <meta name="color-scheme" content="light dark" />
+      
       <title>{html_sanitize(title)}</title>
       <meta name="description" content="Architecturally trained BIM Modeler & Full Stack Developer. Bridging design and technology with custom Automations, AI integrations, and cloud solutions." />
       
