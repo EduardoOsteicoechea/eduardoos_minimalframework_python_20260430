@@ -7,6 +7,7 @@ THEME_STYLES = """
    --accent_color_01: #000;
    --border_radius_01: 4px;
    --button_background: #aaa;
+   --button_active:#0F753C;
 }
 
 :root{
@@ -29,6 +30,7 @@ THEME_STYLES = """
    --global_background: #121212;
    --global_foreground: #e0e0e0;
    --accent_color_01: #ffffff;
-   --button_background: red;
+   --button_background: #ccc;
+   --button_active:#0F753C;
 }
 """

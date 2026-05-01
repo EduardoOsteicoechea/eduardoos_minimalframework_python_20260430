@@ -1,18 +1,18 @@
 PAGE_ACTIONS_STYLES = """
 
 .page_actions_button{
-    height: 35px;
-    width: 35px;
-    border-radius: 100px;
+    height: 45px;
+    width: 45px;
+    border-radius: 4px;
     border:none;
     position: fixed;
-    bottom:20px;
-    right:20px;
+    bottom:10px;
+    right:10px;
     cursor:pointer;
     z-index: 10000;
 }
 .page_actions_button_active{
-    background: #0f0;
+    background: var(--button_active);
 }
 .page_actions_button_unactive{
 }
