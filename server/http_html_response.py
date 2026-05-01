@@ -1,3 +1,5 @@
+# ./server/http_html_response.py
+
 def http_html_response(html_body: str) -> str:
     # Ensure the body is treated strictly as a string
     html_body_str = str(html_body)

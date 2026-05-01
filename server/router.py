@@ -15,9 +15,6 @@ def router(method, path):
         html_string = pages.series_romanos_pablo_llamado()
         return http_html_response(html_string)
         
-    elif path == "/favicon.ico":
-        return http_html_response("")
-        
     else:
         if hasattr(pages, 'undefined'):
             html_string = pages.undefined()

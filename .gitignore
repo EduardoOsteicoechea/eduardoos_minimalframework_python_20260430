@@ -1,0 +1,25 @@
+# ========================
+# Caddy Web Server
+# ========================
+caddy
+caddy.exe
+Caddyfile.autosave
+
+# ========================
+# Python Core
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# Virtual Environments
+# ========================
+venv/
+env/
+.venv/
+
+# ========================
+# Editor / IDE (VS Code)
+# ========================
+.vscode/

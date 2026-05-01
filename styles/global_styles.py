@@ -21,5 +21,15 @@ body{
    background: var(--global_background);
 }
 
+button{
+   background: var(--button_background);
+   border: none;
+   border-radius: 4px;
+}
+
+.hidden{
+   display:none;
+}
+
 """
  

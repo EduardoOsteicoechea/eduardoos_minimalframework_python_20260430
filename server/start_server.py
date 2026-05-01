@@ -1,34 +1,40 @@
 import socket
 from server.handle_request_route import handle_request_route
 
-
 def start_server(host="127.0.0.1", port=8080):
-    # 1. CREATE the socket instance first
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
-
-        # 2. CONFIGURE the socket instance
-        # Prevent the "Address already in use" error when restarting rapidly
         server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
-        # Bind the server to the network interface and port
         server_socket.bind((host, port))
-
-        # Tell the OS to start listening for incoming connections
-        server_socket.listen(1)
+        server_socket.listen(5) # Allow a small backlog
         print(f"Raw API listening on http://{host}:{port} ...")
 
-        # Set the Infinite Event Loop
         while True:
-            # The script completely pauses until a client connects
             client_connection, client_address = server_socket.accept()
-
+            print(f"\n[+] Connection received from {client_address}")
+            
             with client_connection:
                 try:
-                    request_data = client_connection.recv(1024).decode("UTF-8")
+                    # Set a timeout so the socket doesn't hang forever if Caddy keeps it alive
+                    client_connection.settimeout(2.0)
+                    
+                    print("    -> Waiting for request data...")
+                    # 8192 is large enough to catch all proxy headers in one go
+                    request_data = client_connection.recv(8192).decode("UTF-8")
+                    
                     if not request_data:
+                        print("    -> [!] Empty request data, skipping.")
                         continue
                         
+                    print(f"    -> Request received ({len(request_data)} bytes). Routing...")
+                    
+                    # Call your router (which should return the output of http_html_response)
                     final_payload = handle_request_route(request_data)
+                    
+                    print(f"    -> Route handled. Sending payload ({len(final_payload)} bytes)...")
                     client_connection.sendall(final_payload.encode("utf-8"))
+                    print("    -> [✓] Response sent successfully.")
+                    
+                except socket.timeout:
+                    print("    -> [!] Socket timed out waiting for data.")
                 except Exception as e:
-                    print(f"Socket error: {e}")
+                    print(f"    -> [!] Socket error: {e}")
