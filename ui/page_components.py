@@ -40,8 +40,6 @@ def page_top_start(title="App") -> str:
         (function() {{
             try {{
                 var savedTheme = localStorage.getItem('theme_preference');
-                // TEMPORARY DEBUG ALERT:
-                alert("Saved theme on load is: " + savedTheme); 
                 
                 if (savedTheme) {{
                     document.documentElement.setAttribute('data-theme', savedTheme);

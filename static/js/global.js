@@ -25,9 +25,8 @@ export function saveSetting(key, value) {
         const valueToSave = typeof value === 'object' ? JSON.stringify(value) : String(value);
         localStorage.setItem(key, valueToSave);
     } catch (error) {
-        console.error("Error saving setting to localStorage:", error);
+        console.error("Error saving setting:", error);
     }
-}
 
 /**
  * Checks for a saved theme and applies it to the document.
