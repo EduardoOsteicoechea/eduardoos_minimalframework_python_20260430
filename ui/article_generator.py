@@ -22,7 +22,7 @@ def apply_emphasis(text: str, phrases: list[str]) -> str:
 
 
 def format_biblical_quote(text: str, ref: str, phrases: list[str]) -> str:
-    formatted_text = p(apply_emphasis(text, phrases), {"class": "bible_quote_text"})
+    formatted_text = p(f"\"{apply_emphasis(text, phrases)}\"", {"class": "bible_quote_text"})
     ref_box = p(ref, {"class": "bible_quote_reference"})
     content = f"{ref_box} {formatted_text}"
     return blockquote(content, {"class": "bible-quote"})

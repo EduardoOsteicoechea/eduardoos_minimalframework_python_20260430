@@ -1,6 +1,3 @@
-from styles.global_styles import GLOBAL_STYLES
-from styles.page_actions_styles import PAGE_ACTIONS_STYLES
-from styles.theme_styles import THEME_STYLES
 from ui.html_sanitize import html_sanitize
 
 
@@ -9,7 +6,7 @@ def page_top_start(title="App") -> str:
     js_static_assets_route = "/static/js"
     return f"""
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en"">
    <head>
       <meta charset="UTF-8">      
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,18 +29,17 @@ def page_top_start(title="App") -> str:
       <link rel="shortcut icon" href="/static/media/favicon-32.png" sizes="32x32" type="image/png" />
       
       <meta name="google-site-verification" content="RQdklgFawBo75p5tN7wranunENDjUu27gol9MENm-SM" />
+      
+      <link rel="stylesheet" href="/static/css/global.css" />
+      <link rel="stylesheet" href="/static/css/theme.css" />
+      <link rel="stylesheet" href="/static/css/page_actions.css" />
+      
  """
 
 
-def page_top_end(custom_tags, custom_css="") -> str:
+def page_top_end(custom_tags) -> str:
     return f"""
       {custom_tags}
-      <style>
-         {THEME_STYLES}
-         {GLOBAL_STYLES}
-         {PAGE_ACTIONS_STYLES}
-         {custom_css}
-      </style>
    </head>
 """
 
@@ -54,11 +50,15 @@ def page_body_start() -> str:
 
 def page_body_end() -> str:
     return """
-    <button id="page_actions_button" class="page_actions_button page_actions_button_unactive"></button>
     <div id="page_actions_main_container" class="page_actions_main_container">        
-        <button id="toggle_theme_button" class="page_action_button"></button>
-        <button id="display_biblical_references_button" class="page_action_button"></button>
+        <div id="page_actions_action_buttons_container" class="page_actions_action_buttons_container">        
+            <button id="toggle_theme_button" class="page_action_button"></button>
+            <button id="display_biblical_references_button" class="page_action_button"></button>
+        </div>
+        <button id="page_actions_button" class="page_actions_button page_actions_button_unactive"></button>
     </div>
+    
+    <script type="module" src="/static/js/global.js"></script>
     <script type="module" src="/static/js/page_actions/page_actions_button.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@ import toggle_theme_button_action from "./toggle_theme_button.js"
 import display_biblical_references_button_action from "./display_biblical_references_button.js"
 
 const page_actions_button = document.getElementById("page_actions_button");
-const page_actions_main_container = document.getElementById("page_actions_main_container");
+const page_actions_action_buttons_container = document.getElementById("page_actions_action_buttons_container");
 const toggle_theme_button = document.getElementById("toggle_theme_button");
 const display_biblical_references_button = document.getElementById("display_biblical_references_button");
 
@@ -10,7 +10,7 @@ toggle_theme_button_action(toggle_theme_button)
 display_biblical_references_button_action(display_biblical_references_button)
 
 page_actions_button.addEventListener("pointerup", () => {
-    toggle_action_buttons_container(page_actions_main_container);
+    toggle_action_buttons_container(page_actions_action_buttons_container);
     toggle_page_actions_menu_button_style(page_actions_button);
 });
 
