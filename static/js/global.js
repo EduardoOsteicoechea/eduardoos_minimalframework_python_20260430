@@ -27,7 +27,7 @@ export function saveSetting(key, value) {
     } catch (error) {
         console.error("Error saving setting:", error);
     }
-
+}
 /**
  * Checks for a saved theme and applies it to the document.
  * If no saved theme exists, it defaults to the system preference.
