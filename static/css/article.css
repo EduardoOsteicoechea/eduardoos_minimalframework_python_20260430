@@ -4,7 +4,7 @@ article {
    flex-direction:column;
    max-width: 66ch;
    width: calc(100vw - 4rem);
-   padding: 1rem;
+   padding: 1.5rem;
    gap:20px;
 }
 
