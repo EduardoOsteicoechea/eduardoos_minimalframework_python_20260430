@@ -13,6 +13,7 @@
 
 /* Base styles applied to the root */
 :root {
+   font-size: 16px;
    --default_font_weight: 500; /* FIXED: Removed the spaces here */
    font-family: Montserrat, Raleway, Outfit, system-ui, sans-serif;
    font-weight: var(--default_font_weight);

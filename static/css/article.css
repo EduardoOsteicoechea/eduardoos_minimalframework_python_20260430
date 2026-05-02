@@ -3,8 +3,10 @@ article {
    display:flex;
    flex-direction:column;
    max-width: 55ch;
-   margin: 1rem auto;
+   margin: 1rem auto 1.5rem auto;
    padding: 0 1.5rem;
+   height: calc(100vh - 2.8rem);
+   overflow: hidden;
    gap:20px;
 }
 
@@ -57,7 +59,7 @@ section {
 
 h2 {
    font-size:1.5rem;
-   margin: 60px 0;
+   margin: 70px 0;
 }
 
 p {
