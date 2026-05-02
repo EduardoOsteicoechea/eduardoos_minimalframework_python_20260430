@@ -3,23 +3,23 @@
     flex-direction: column;
     align-items: center;
 
-    margin: 10px 0 0 0;
+    margin: 1rem 0 0 0;
     overflow-x: visible;
     
     height: fit-content;
     max-height: calc(100vh - 20px);
-    width: 50px;
+    width: var(--default_button_height);
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 1rem;
+    right: 1rem;
 
     border-radius: 4px;
     z-index: 9000;
 }
 
 .page_actions_button {
-    height: 50px;
-    width: 50px;
+    height: var(--default_button_height);
+    width: var(--default_button_height);
     border-radius: 4px;
     z-index: 10000;
     margin: 10px 0 0 0;
@@ -43,7 +43,7 @@
 }
 
 .page_action_button {
-    height: 50px;
+    height: var(--default_button_height);
     width: 100%;
     border-radius: 4px;
     z-index: 10000; 

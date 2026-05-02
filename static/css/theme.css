@@ -15,6 +15,9 @@
 :root {
    font-size: 16px;
    --default_font_weight: 500; /* FIXED: Removed the spaces here */
+   
+   --default_button_height: 2rem;
+
    font-family: Montserrat, Raleway, Outfit, system-ui, sans-serif;
    font-weight: var(--default_font_weight);
    color: var(--global_foreground);

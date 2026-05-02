@@ -2,12 +2,9 @@
 article {
    display:flex;
    flex-direction:column;
-   max-width: 55ch;
-   margin: 0 auto;
-   padding: 1.5rem;
-   height: calc(100vh - 2.8rem);
-   overflow-x: hidden;
-   overflow-y: auto;
+   max-width: 66ch;
+   width: calc(100vw - 4rem);
+   padding: 1rem;
    gap:20px;
 }
 
