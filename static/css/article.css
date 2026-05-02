@@ -6,7 +6,8 @@ article {
    margin: 1rem auto 1.5rem auto;
    padding: 0 1.5rem;
    height: calc(100vh - 2.8rem);
-   overflow: hidden;
+   overflow-x: hidden;
+   overflow-y: auto;
    gap:20px;
 }
 
