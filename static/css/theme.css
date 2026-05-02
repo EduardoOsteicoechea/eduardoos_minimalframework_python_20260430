@@ -14,7 +14,7 @@
 /* Base styles applied to the root */
 :root {
    --default_font_weight: 500; /* FIXED: Removed the spaces here */
-   font-family: Raleway, Montserrat, Outfit, system-ui, sans-serif;
+   font-family: Montserrat, Raleway, Outfit, system-ui, sans-serif;
    font-weight: var(--default_font_weight);
    color: var(--global_foreground);
    background-color: var(--global_background); /* ADDED: Applies the background color to the page */
