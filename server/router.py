@@ -1,11 +1,19 @@
+from api import handle_register
 from server.http_html_response import http_html_response
 from ui.pages import pages
 
-def router(method, path):
+def router(method, path, body):
     
     if path == "/" or path == "/home":
         html_string = pages.home(user_name="Eduardo")
         return http_html_response(html_string)
+        
+    elif path == "/register":
+        html_string = pages.register()
+        return http_html_response(html_string)        
+    elif path == "/api/register" and method == "POST":
+        response = handle_register(body)
+        return response
         
     elif path == "/series":
         html_string = pages.series()

@@ -6,6 +6,7 @@ import traceback  # Import traceback to get the stack trace
 from ui.article_generator import article_generator
 from ui.html_sanitize import html_sanitize
 from views.home import home_view
+from views.register import register_view
 from views.series import series_view
 from ui.layout import base_layout
 
@@ -21,6 +22,9 @@ class pages:
     @staticmethod
     def home(user_name="Guest"):
         return home_view(user_name)
+
+    def register():
+        return register_view()
 
     @staticmethod
     def undefined():

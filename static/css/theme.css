@@ -6,7 +6,8 @@
    --global_foreground: #555;
    --accent_color_01: #000;
    --border_radius_01: 4px;
-   --button_background: #aaa;
+   --button_background: #000;
+   --button_foreground: #fff;
    --button_active: #21c568;
 }
 
@@ -36,6 +37,7 @@
    --global_background: #121212;
    --global_foreground: #e0e0e0;
    --accent_color_01: #ffffff;
-   --button_background: #ccc;
+   --button_background: #fff;
+   --button_foreground: #000;
    --button_active: #21c568;
 }
