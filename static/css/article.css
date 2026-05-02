@@ -44,6 +44,8 @@ section {
 .bible_quote_text{
    width:100%;
    font-style: italic;
+   color:#e49c00;
+   font-weight: 700;
 }
 
 .bible_quote_reference {
@@ -65,6 +67,7 @@ p {
 }
 
 strong {
-   font-weight: var(--default_font_weight);
+   font-weight: 700;
+   /* font-weight: var(--default_font_weight); */
    /* text-decoration: underline; */
 }
