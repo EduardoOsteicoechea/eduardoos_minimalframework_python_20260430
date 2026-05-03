@@ -31,14 +31,4 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # 1. Navigate to the application directory
-            cd /var/www/eduardoos.com
-            
-            # (Optional but recommended): Activate your virtual environment here if you use one on the server
-            # source venv/bin/activate
-            
-            # 2. Install Python dependencies
-            pip3 install -r requirements.txt
-            
-            # 3. Restart the systemd service
             sudo systemctl restart eduardoos-api
