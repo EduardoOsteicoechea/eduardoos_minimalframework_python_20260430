@@ -53,7 +53,7 @@
                "text": "¿Por qué aparecérsele a un hombre incrédulo y obstinado?"
             }
             ,{
-               "text": "¿Por qué privilegiar a un hombre que azotó a tantas personas santas e inocentes?"
+               "text": "¿Por qué privilegiar a un hombre que azotó a tantas personas inocentes?"
             }
             ,{
                "text": "¿Por qué privilegiar a una persona tan opuesta al Cristianismo?"
@@ -92,12 +92,12 @@
                "emphasized_phrases": []
             },
             {
-               "text": "Dios escoge lo peor del mundo para destruir el orgullo de los hombres."
-            },
-            {
                "text": "...Dios ha escogido lo necio del mundo para avergonzar a los sabios; y Dios ha escogido lo débil del mundo para avergonzar a lo que es fuerte. También Dios ha escogido lo vil y despreciado del mundo: lo que no es, para anular lo que es, para que nadie se jacte delante de Dios.",
                "biblical_reference": "1 Corintios 1:27-29",
                "emphasized_phrases": []
+            },
+            {
+               "text": "Dios escoge lo peor del mundo para destruir el orgullo de los hombres."
             }
          ]
       },
