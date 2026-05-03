@@ -20,16 +20,25 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "." 
           target: "/var/www/eduardoos.com"
-          # Excludes copying your local pycache and git folders to the server
           rm: false 
-          exclude: ".git/,__pycache__/,*.pyc"
+          # Excludes local virtual environments, pycache, and git folders
+          exclude: ".git/,__pycache__/,*.pyc,venv/,.venv/"
 
-      - name: Restart Systemd Service
+      - name: Install Dependencies and Restart Systemd Service
         uses: appleboy/ssh-action@v1.0.3 
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            # 1. Navigate to the application directory
+            cd /var/www/eduardoos.com
+            
+            # (Optional but recommended): Activate your virtual environment here if you use one on the server
+            # source venv/bin/activate
+            
+            # 2. Install Python dependencies
             pip install -r requirements.txt
+            
+            # 3. Restart the systemd service
             sudo systemctl restart eduardoos-api
