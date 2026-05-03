@@ -75,7 +75,7 @@ strong {
 /* =========================================
    TABLET THEME (Screens smaller than 768px)
    ========================================= */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 821px) {
 
    h1,h2 {
       font-size: 2rem !important;
