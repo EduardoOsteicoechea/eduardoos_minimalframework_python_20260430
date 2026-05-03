@@ -2,7 +2,7 @@
 article {
    display:flex;
    flex-direction:column;
-   max-width: 66ch;
+   max-width: 50ch;
    width: calc(100vw - 4rem);
    padding: 1.5rem;
    gap:20px;
@@ -14,7 +14,7 @@ article {
 }
 
 h1,h2 {
-   color: var(--accent_color_01);
+   color: var(--accent_color_02);
 }
 
 section {
@@ -44,7 +44,7 @@ section {
 .bible_quote_text{
    width:100%;
    font-style: italic;
-   color:#da9500;
+   color:var(--accent_color_01);
    font-weight: 700;
 }
 

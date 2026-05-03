@@ -1,8 +1,12 @@
-from api import handle_register
+from api.handle_register import handle_register
 from server.http_html_response import http_html_response
 from ui.pages import pages
 
 def router(method, path, body):
+    # print(f"[METHOD: router]:")
+    # print(f"    method: {method}")
+    # print(f"    path: {path}")
+    # print(f"    body: {body}")
     
     if path == "/" or path == "/home":
         html_string = pages.home(user_name="Eduardo")

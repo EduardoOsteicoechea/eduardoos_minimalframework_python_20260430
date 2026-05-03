@@ -1,7 +1,14 @@
 from server.router import router
 
-def handle_request_route(request_data):
+def handle_request_route(request_data):    
+    # print(f"[METHOD: handle_request_route]: {request_data}")
+    # print(f"    request_data: {request_data}")
+    
     request_lines = request_data.split("\r\n")
+    
+    if not request_lines:        
+        print(f"[METHOD: handle_request_route]: missing request_lines")
+    
     request_first_line = request_lines[0]
     line_parts = request_first_line.split(" ")
     

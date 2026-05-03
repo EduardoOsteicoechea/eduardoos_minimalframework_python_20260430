@@ -4,11 +4,13 @@
    color-scheme: light; /* Tells mobile browsers NOT to auto-invert */
    --global_background: #f0f0f0;
    --global_foreground: #555;
-   --accent_color_01: #000;
    --border_radius_01: 4px;
    --button_background: #000;
    --button_foreground: #fff;
-   --button_active: #21c568;
+   --button_active: #21c568; 
+
+   --accent_color_01: #da9500;
+   --accent_color_02: #000;
 }
 
 /* Base styles applied to the root */
@@ -40,8 +42,10 @@
    color-scheme: dark; /* Tells mobile browsers this is officially dark */
    --global_background: #121212;
    --global_foreground: #e0e0e0;
-   --accent_color_01: #ffffff;
    --button_background: #fff;
    --button_foreground: #000;
    --button_active: #21c568;
+   
+   --accent_color_01: #ffae00;
+   --accent_color_02: #fff;
 }
