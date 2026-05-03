@@ -76,15 +76,9 @@ strong {
    TABLET THEME (Screens smaller than 768px)
    ========================================= */
 @media screen and (max-width: 768px) {
-   article {
-      width: calc(100vw - 2rem);
-      /* Maximize horizontal space */
-      padding: 1rem;
-      gap: 15px;
-   }
 
    h1,h2 {
-      font-size: 2rem;
+      font-size: 2rem !important;
    }
 }
 
@@ -92,5 +86,8 @@ strong {
    MOBILE THEME (Screens smaller than 480px)
    ========================================= */
 @media screen and (max-width: 480px) {
+   h1,h2 {
+      font-size: 2rem !important;
+   }
 
 }
