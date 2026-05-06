@@ -1,11 +1,11 @@
-from ui.layout import article_layout
-from ui.html_elements import h1, p, div, strong
+from frontend.layout import article_layout
+from frontend.html_elements import h1, p, div, strong
 
 def series_view(teacher_name="Pablo"):
     
     dynamic_content = div(
-        h1("Llamado a ser apóstol"),
-        p("Esta es una lección sobre el fundamento del ", strong("evangelio"), "."),
+        h1("Series"),
+        "sdfsd",
         class_="lesson-container"
     )
     

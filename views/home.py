@@ -1,4 +1,4 @@
-from ui.layout import base_layout
+from frontend.layout import base_layout
 
 
 def home_view(user_name="Guest"):

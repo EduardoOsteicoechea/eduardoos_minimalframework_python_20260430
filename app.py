@@ -1,4 +1,4 @@
-from server.start_server import start_server
+from server.http_server import http_server
 
 if __name__ == "__main__":
-   start_server()
+    http_server()
